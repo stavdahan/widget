@@ -22,8 +22,8 @@ const createArticlesList = async () => {
   );
 
   presentedArticles = filteredObjects
-    .map((obj) => createArticleElement(obj))
-    .slice(0, COUNT);
+    .slice(0, COUNT)
+    .map((obj) => createArticleElement(obj));
 
   presentedArticles.forEach((article) => {
     document.getElementById("articlesList").appendChild(article);
